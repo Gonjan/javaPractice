@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:annotation-config />仅能够在已经在已经注册过的bean上面起作用。-->
+    <!--对于没有在spring容器中注册的bean，它并不能执行任何操作。-->
+    <!--但是不用担心，<context:component-scan>除了具有<context:annotation-config />的功能之外，-->
+    <!--还具有自动将带有@component,@service,@Repository等注解的对象注册到spring容器中的功能。-->
+
+    <!--<context:annotation-config/>-->
+    <context:component-scan base-package="general.*"/>
+
+</beans>
