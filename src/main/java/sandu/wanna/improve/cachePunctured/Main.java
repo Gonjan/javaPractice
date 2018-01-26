@@ -4,12 +4,17 @@
  */
 package sandu.wanna.improve.cachePunctured;
 
+import general.service.GoodsStockService;
 import general.service.UserInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import utils.SpringUtil;
+
+import java.util.concurrent.CountDownLatch;
 
 /**
  *
@@ -20,14 +25,20 @@ public class Main {
 
     private static Logger logger = LoggerFactory.getLogger(Main.class);
 
-    @Autowired
-    private UserInfoService userInfoService;
+    private CountDownLatch countDownLatch = new CountDownLatch(10);
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = SpringUtil.initSpringContainer();
-        UserInfoService userInfoService = SpringUtil.getBean(applicationContext,UserInfoService.class);
-        if(logger.isInfoEnabled()) {
-            logger.info(userInfoService.selectByPrimaryKey(1).getUserAge());
-        }
+        GoodsStockService goodsStockService = SpringUtil.getBean(applicationContext,GoodsStockService.class);
+        RedisTemplate<String,String> redisTemplate = SpringUtil.getBean(applicationContext,RedisTemplate.class);
+
     }
+
+    private void testCache() {
+
+    }
+
+
+
+
 }

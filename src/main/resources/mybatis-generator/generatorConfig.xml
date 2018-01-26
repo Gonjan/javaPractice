@@ -35,7 +35,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="USER_INFO" domainObjectName="UserInfo"
+        <table tableName="GOODS_STOCK" domainObjectName="GoodsStock"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

@@ -6,7 +6,6 @@ package general.service;
 
 import general.model.UserInfo;
 
-import java.util.List;
 
 /**
  *
@@ -14,7 +13,5 @@ import java.util.List;
  * @version $Id: UserInfoService.java, v 0.1 2018年01月24日 22:38 Gonjan Exp $
  */
 public interface UserInfoService {
-
-
     UserInfo selectByPrimaryKey(Integer id);
 }

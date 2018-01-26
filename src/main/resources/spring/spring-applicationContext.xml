@@ -12,5 +12,7 @@
 
     <!--<context:annotation-config/>-->
     <context:component-scan base-package="general.*"/>
+    <bean id="redisCache" class="utils.RedisCache"/>
+
 
 </beans>
