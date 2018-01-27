@@ -18,3 +18,10 @@
 =====xxx=====
 
 工程环境配置完成，Spring，Mybatis，Mybatis-generator，logback，etc
+
+
+
+
+=====2018/1/26=====
+
+利用锁机制解决高并发情况下缓存击穿导致数据库库崩溃的demo
